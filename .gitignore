@@ -39,4 +39,4 @@ neto-fit/.env
 *.tsbuildinfo
 
 app-example
-neto-fit/src/lib/supabase.ts
+/src/lib/supabase.ts
