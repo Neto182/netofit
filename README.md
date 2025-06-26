@@ -1,9 +1,9 @@
-Neto-fit 💪
+## Neto-fit 
 
 Um aplicativo de treino para musculação focado em dar autonomia e controle total ao usuário sobre suas rotinas e progresso. Construído com React Native (Expo) e Supabase.
 
 
-🎥 Demonstração
+### Demonstração
 
 | Tela Inicial                   | Criação de Treino               |
 |--------------------------------|---------------------------------|
@@ -23,7 +23,7 @@ Um aplicativo de treino para musculação focado em dar autonomia e controle tot
 
 
 
-📝 Sobre o Projeto
+### Sobre o Projeto
 
 Foi criado o Neto-Fit como um projeto de estudo prático para consolidar conhecimentos em full-stack mobile. Ao longo do desenvolvimento, foram usados:
 
@@ -40,7 +40,7 @@ Foi criado o Neto-Fit como um projeto de estudo prático para consolidar conheci
 A cada implementação — busca de exercícios, criação de rotinas personalizadas, lembrete de suplementação ou gráficos de evolução — novos desafios surgiram e foram oportunidades para aprofundar as boas práticas de código, testes e deployment. O Neto-Fit segue em constante evolução, incorporando diariamente features que ampliam sua robustez e funcionalidade.
 
 
-✨ Funcionalidades Implementadas
+### Funcionalidades Implementadas
 
     Autenticação Completa de Usuários:
 
@@ -50,7 +50,7 @@ A cada implementação — busca de exercícios, criação de rotinas personaliz
 
         Fluxo de redirecionamento automático: usuários não logados são direcionados para a tela de Login, e usuários logados para a tela principal.
 
-    Enciclopédia de Exercícios:
+  ####  Enciclopédia de Exercícios:
 
         Uma base de dados com 50 exercícios detalhados, armazenados no Supabase.
 
@@ -62,7 +62,7 @@ A cada implementação — busca de exercícios, criação de rotinas personaliz
 
         Tela de detalhes para cada exercício, mostrando instruções de execução, equipamento, etc.
 
-    Criação de Modelos de Treino:
+   #### Criação de Modelos de Treino:
 
         Sistema completo para o usuário criar, salvar e visualizar seus próprios modelos de treino.
 
@@ -70,11 +70,11 @@ A cada implementação — busca de exercícios, criação de rotinas personaliz
 
         Os modelos são salvos no banco de dados e associados ao perfil do usuário.
 
-    Segurança no Backend:
+   #### Segurança no Backend:
 
         Uso de Row Level Security (RLS) em todas as tabelas, garantindo que um usuário só possa ver e modificar os seus próprios dados.
 
-🛠️ Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
     Frontend:
 
@@ -92,7 +92,7 @@ A cada implementação — busca de exercícios, criação de rotinas personaliz
 
         Supabase Auth
 
-🚀 Como Executar o Projeto Localmente
+### Como Executar o Projeto Localmente
 
 Para executar o projeto na sua máquina, siga estes passos:
 
@@ -121,12 +121,12 @@ Para executar o projeto na sua máquina, siga estes passos:
 
         Escaneie o QR Code com o aplicativo Expo Go no seu celular.
 
-🐘 Banco de Dados (Supabase)
+### Banco de Dados (Supabase)
 
 A estrutura do banco de dados e as políticas de segurança foram criadas usando scripts SQL. Para replicar o ambiente, você pode executar os scripts de criação de tabelas e de população de exercícios no SQL Editor do seu projeto Supabase.
 
 (Sugestão: Crie uma pasta supabase/ no seu projeto e salve os scripts SQL que criamos lá para referência futura.)
-🗺️ Próximos Passos (Roadmap)
+### Próximos Passos (Roadmap)
 
     [ ] Implementar a tela de "Treino Ativo" para registrar séries, repetições e peso.
 
@@ -139,7 +139,7 @@ A estrutura do banco de dados e as políticas de segurança foram criadas usando
     [ ] Reformular a tela de Início (index.tsx) para ser um painel de controle dinâmico com os treinos do usuário.
 
 
-👨‍💻 Autor
+## Autor
 
 Ademir Neto
 
