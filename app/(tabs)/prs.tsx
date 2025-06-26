@@ -52,5 +52,5 @@ export default function PRsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   content: { padding: 16 },
-  title: { fontSize: 24, marginBottom: 16, textAlign: 'center' },
+  title: { paddingTop: 60, fontSize: 24, marginBottom: 16, textAlign: 'center' },
 });

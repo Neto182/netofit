@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   title: {
+    paddingTop: 60,
     marginBottom: 24,
     textAlign: 'center',
   },

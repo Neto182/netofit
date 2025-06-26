@@ -1,5 +1,5 @@
 // app/(tabs)/index.tsx
-import 'react-native-url-polyfill/auto';
+
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
@@ -59,7 +59,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container:      { flex: 1 },
   scrollContainer:{ padding: 16 },
-  header:         { marginBottom: 24, paddingTop: 16 },
+  header:         { marginBottom: 24, paddingTop: 60 },
   section:        { marginBottom: 24 },
   sectionTitle:   { fontSize: 20, marginBottom: 12 },
 });

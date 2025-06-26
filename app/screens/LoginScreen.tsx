@@ -1,9 +1,8 @@
 // app/screens/LoginScreen.tsx
 
 import React, { useState } from 'react';
-// NOVO: Adicionamos Text aqui, caso não estivesse
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native'; 
-import { Link } from 'expo-router'; // NOVO: Importamos o componente de Link
+import { Link } from 'expo-router';
 
 import { supabase } from '../../src/lib/supabase';
 
@@ -12,35 +11,22 @@ export default function LoginScreen() {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
 
-    // Em app/screens/LoginScreen.tsx
+    async function handleSignIn() {
+        setLoading(true);
 
-async function handleSignIn() {
-    // Espião 1: Confirma que o clique no botão chamou a função.
-    console.log('--- GATILHO DISPARADO: Função handleSignIn iniciada. ---');
-    setLoading(true);
+        const { error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password,
+        });
 
-    // Espião 2: Mostra os dados que estamos enviando.
-    console.log('Tentando fazer login com:', { email, password });
-
-    const { error } = await supabase.auth.signInWithPassword({
-        email: email,
-        password: password,
-    });
-
-    // Espião 3: Mostra o resultado que o Supabase retornou.
-    console.log('Resposta do Supabase:', { error });
-
-    if (error) {
-        console.log('O código entrou no bloco IF (erro).');
-        Alert.alert('Erro no Login', error.message);
-    } else {
-        console.log('O código entrou no bloco ELSE (sucesso). O redirecionamento deve acontecer.');
-        // O alerta aqui é opcional, pois o redirecionamento já é a confirmação.
+        if (error) {
+            Alert.alert('Erro no Login', error.message);
+        }
+        // Se não houver erro, o AuthContext e o _layout.tsx
+        // cuidarão do redirecionamento automático.
+        
+        setLoading(false);
     }
-
-    setLoading(false);
-    console.log('--- FIM DA FUNÇÃO handleSignIn. ---');
-}
 
     return (
         <View style={styles.container}>
@@ -69,7 +55,6 @@ async function handleSignIn() {
                 disabled={loading}
             />
 
-            {/* NOVO: Adicionamos esta seção para o link de cadastro */}
             <View style={styles.linkContainer}>
                 <Text style={styles.linkText}>Não tem uma conta?</Text>
                 <Link href="/screens/CadastroScreen" style={styles.link}>
@@ -103,7 +88,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         fontSize: 16,
     },
-    // NOVO: Estilos para o container do link e o próprio link
     linkContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
@@ -115,7 +99,7 @@ const styles = StyleSheet.create({
     link: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#007BFF', // Um azul padrão para links
+        color: '#007BFF',
         marginLeft: 5,
     },
 });
